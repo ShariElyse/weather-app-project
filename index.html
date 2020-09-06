@@ -2,8 +2,121 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script
+      src="https://kit.fontawesome.com/206bebed6c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>🌤Weather App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1></h1>
+        </div>
+        <div class="col-6">
+          <form class="form-inline" id="search-city-form">
+            <div class="form-group mb-2">
+              <input type="text" class="form-control-plaintext" />
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter your city"
+                id="find-city"
+              />
+            </div>
+            <button type="submit" class="btn btn-light mb-2">Search</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">Mon</div>
+        <div class="col-2">
+          <i class="fas fa-sun"></i>
+        </div>
+        <div class="col-2">91°F</div>
+        <div class="col-6 rightSide">
+          <h2><strong>New York</strong></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">Tues</div>
+        <div class="col-2">
+          <i class="fas fa-sun"></i>
+        </div>
+        <div class="col-2">89°F</div>
+        <div class="col-6 rightSide">
+          <h3>
+            Today <br />
+            August 9, 2020
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">Wed</div>
+        <div class="col-2">
+          <i class="fas fa-cloud-showers-heavy"></i>
+        </div>
+        <div class="col-2">87°F</div>
+        <div class="col-6 rightSide">
+          <h4><strong>88°F</strong></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">Thurs</div>
+        <div class="col-2">
+          <i class="fas fa-cloud-showers-heavy"></i>
+        </div>
+        <div class="col-2">84°F</div>
+        <div class="col-6 rightSide">
+          <i class="fas fa-cloud-sun"></i>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">Fri</div>
+        <div class="col-2">
+          <i class="fas fa-cloud-showers-heavy"></i>
+        </div>
+        <div class="col-2">80°F</div>
+        <div class="col-6 rightSide">
+          <p>
+            Precipitation: 0in <br />
+            Humidity: 62% <br />
+            Wind: s 11mph
+          </p>
+        </div>
+      </div>
+
+      <div class="btn-toolbar">
+        <div class="btn-group mr-2">
+          <button type="button" class="btn btn-light" id="show-celsius">
+            °C
+          </button>
+          <button type="button" class="btn btn-light" id="show-fahrenheit">
+            °F
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
