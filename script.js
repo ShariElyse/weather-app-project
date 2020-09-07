@@ -27,3 +27,49 @@ function displayCity(event) {
 
 let searchCity = document.querySelector("#search-city-form");
 searchCity.addEventListener("submit", displayCity);
+
+function showTimeAndDate() {
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let monthDays = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let now = new Date();
+  let day = weekDays[now.getDay()];
+  let month = monthDays[now.getMonth()];
+  let date = now.getDate();
+  let year = now.getFullYear();
+  let hour = now.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = now.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+
+  let time = document.querySelector("h1");
+  time.innerHTML = `${hour}:${minute}`;
+
+  let fullDate = document.querySelector("h3");
+  fullDate.innerHTML = `Today <br/> ${day}, ${month} ${date}, ${year}`;
+}
+showTimeAndDate();
